@@ -1,1 +1,2 @@
-script!
+#!/bin/bash
+su betty
