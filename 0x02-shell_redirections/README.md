@@ -5,7 +5,7 @@ This project builds upon previous knowledge with the introduction of [I/O Redire
 New commands introduced in this project include:
 `echo`, `cat`, `head`, `tail`, `find`, `wc`, `sort`, `uniq`, `grep`, `tr`, `rev`, `cut`
 
-##### 0. Hello World
+#### 0. Hello World
 Write a script that prints “Hello, World”, followed by a new line to the standard output.
 #### 1. Confused smiley
 Write a script that displays a confused smiley "(Ôo)'.
@@ -46,17 +46,39 @@ Hidden directories should be counted
 #### 12. What’s new mandatory
 
 Create a script that displays the 10 newest files in the current directory.
+#### 13. Being unique is better than being perfect mandatory
 
-Requirements:
+Create a scripts that takes a list of words as input and prints only words that appear exactly once.
+#### 14. It must be in that file mandatory
 
-One file per line
-Sorted from the newest to the oldest
-#### 
-#### 
-#### 
-#### 
-#### 
-#### 
-#### 
-#### 
-#### 
+Display lines containing the pattern "root" from the file /etc/passwd
+#### 14. It must be in that file mandatory
+
+Display lines containing the pattern "root" from the file /etc/passwd
+#### 15. Count that word mandatory
+
+Display the number of lines that contain the pattern "bin" in the file /etc/passwd
+#### 16. What's next? mandatory
+
+Display lines containing the pattern "root" and 3 lines after them in the file /etc/passwd.
+#### 17. I hate bins mandatory
+
+Display all the lines in the file /etc/passwd that do not contain the pattern "bin".
+#### 18. Letters only please mandatory
+
+Display all lines of the file /etc/ssh/sshd_config starting with a letter.
+#### 19. A to Z mandatory
+
+Replace all characters A and c from input to Z and e respectively.
+#### 20. Without C, you would live in hiago mandatory
+
+Create a script that removes all letters c and C from input.
+#### 21. esreveR mandatory
+
+Write a script that reverse its input.
+
+#### 22. DJ Cut Killer mandatory
+
+Write a script that displays all users and their home directories, sorted by users.
+
+Based on the the /etc/passwd file
