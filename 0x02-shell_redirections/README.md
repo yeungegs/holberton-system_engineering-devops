@@ -6,7 +6,8 @@ New commands introduced in this project include:
 `echo`, `cat`, `head`, `tail`, `find`, `wc`, `sort`, `uniq`, `grep`, `tr`, `rev`, `cut`
 
 #### 0. Hello World
-[ ]Write a script that prints “Hello, World”, followed by a new line to the standard output.
+[ ] Write a script that prints “Hello, World”, followed by a new line to the standard output.
+[ ] other item
 #### 1. Confused smiley
 Write a script that displays a confused smiley `"(Ôo)'`.
 #### 2. Let's display a file 
