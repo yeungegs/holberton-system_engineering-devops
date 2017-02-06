@@ -5,11 +5,11 @@ This project builds upon previous knowledge with the introduction of [Expansions
 New commands introduced in this project include:
 `printenv`, `set`, `unset`, `export`, `alias`, `unalias`, `.`, `source`, `printf`
 
-14-decimal_to_hexadecimal 13-print_float 12-combinations 11-binary_to_decimal 10-love_exponent_breath 9-divide_and_rule 8-true_knowledge 7-create_global_variable 6-create_local_variable 5-local_variables 4-global_variables 3-paths 2-path 1-hello_you 0-alias
-####0. <o>
-[Create a script that creates an alias.](./0-alias)
-Name: `ls`
-Value: `rm *`
+####0.`<o>`
+Create a script that creates an alias.
+- Name: `ls`
+- Value: `rm *`
+
 ####1. Hello you
 Create a script that prints `hello user`, where user is the current Linux user.
 ####2. The path to success is to take massive, determined action
