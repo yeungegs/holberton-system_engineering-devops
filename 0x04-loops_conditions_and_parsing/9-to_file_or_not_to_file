@@ -1,1 +1,29 @@
-#!/usr/bin/python3
+#!/usr/bin/env bash
+# this script gives you information about the holbertonschool file
+# Your Bash script should check if the file exists and print:
+# if the file exists: holbertonschool file exists
+# if the file does not exist: holbertonschool file does not exist
+# If the file exists, print:
+# if the file is empty: holbertonschool file is empty
+# if the file is no empty: holbertonschool file is not empty
+# if the file is a regular file: holbertonschool is a regular file
+# if the file is not a regular file: (nothing)
+		  
+FILE=holbertonschool
+if [ -e $FILE ]; then
+    echo "${FILE} file exists"
+
+    if [ -s $FILE ]; then
+	echo "${FILE} file is not empty"
+    else
+	echo "${FILE} file is empty"
+    fi
+
+    if [ -f $FILE ]; then
+	echo "${FILE} file is a regular file"
+    fi
+
+else
+    echo "holberton file does not exist"
+
+fi
