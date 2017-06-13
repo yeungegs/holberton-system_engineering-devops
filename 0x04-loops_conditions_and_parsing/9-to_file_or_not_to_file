@@ -10,20 +10,20 @@
 # if the file is not a regular file: (nothing)
 		  
 FILE=holbertonschool
-if [ -e $FILE ]; then
-    echo "${FILE} file exists"
+if [ -e $FILE ];then
+    echo "$FILE file exists"
 
     if [ -s $FILE ]; then
-	echo "${FILE} file is not empty"
+	echo "$FILE file is not empty"
     else
-	echo "${FILE} file is empty"
+	echo "$FILE file is empty"
     fi
 
     if [ -f $FILE ]; then
-	echo "${FILE} file is a regular file"
+	echo "$FILE file is a regular file"
     fi
 
 else
-    echo "holberton file does not exist"
+    echo "$FILE file does not exist"
 
 fi
