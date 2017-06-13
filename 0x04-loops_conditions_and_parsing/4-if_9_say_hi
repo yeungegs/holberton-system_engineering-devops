@@ -5,9 +5,9 @@ i=1
 while [[ $i -le 10 ]]; do
     echo "Holberton School"
 
-    if [[ $i -eq 9 ]]; then
+    if [[ $i -eq 9 ]];
+    then
 	echo Hi
-    else
     fi
     let i+=1
 done
