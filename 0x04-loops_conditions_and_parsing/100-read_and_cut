@@ -6,4 +6,4 @@ i=0
 while [ $i -eq 1 ]; do
     break
 done
-cut -d':' -f1,3,6 /etc/passwd
+cut -d':' -f1,4,6 /etc/passwd
