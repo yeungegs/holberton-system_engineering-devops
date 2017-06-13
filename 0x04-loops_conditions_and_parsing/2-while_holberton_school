@@ -1,1 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env bash
+# This script displays Holberton School 10 times using a while loop
+i="1"
+while [ $i -le 10 ]
+do
+    echo "Holberton School"
+    i=$(( i + 1 ))
+done
