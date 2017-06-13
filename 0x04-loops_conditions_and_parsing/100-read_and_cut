@@ -3,5 +3,5 @@
 # username, groupid, shell full path
 
 while read line; do
-    echo $line | cut -d':' -f1,3,6
+    echo "$line" | cut -d':' -f 1,3,6
 done < /etc/passwd
