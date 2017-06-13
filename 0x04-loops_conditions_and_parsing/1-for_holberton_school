@@ -1,1 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+for i in $(seq 1 1 10)
+do
+    echo "Holberton School"
+done
