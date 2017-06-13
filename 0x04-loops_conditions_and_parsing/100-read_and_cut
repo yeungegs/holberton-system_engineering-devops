@@ -2,8 +2,6 @@
 # this script displays only the following fields from /etc/passwd
 # username, groupid, shell full path
 
-i=0
-while [ $i -eq 1 ]; do
-    break
-done
-cut -d':' -f1,4,6 /etc/passwd
+while read line; do
+    echo $line | cut -d':' -f1,3,6
+done < /etc/passwd
