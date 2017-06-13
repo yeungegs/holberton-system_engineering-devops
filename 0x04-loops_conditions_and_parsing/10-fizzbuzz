@@ -1,1 +1,20 @@
-#!/usr/bin/python3
+#!/usr/bin/env bash
+# this script displays numbers from 1 to 100.
+# Requirements:
+# Displays FizzBuzz when the number is a multiple of 3 and 5
+# Displays Fizz when the number is multiple of 3
+# Displays Buzz when the number is a multiple of 5
+# Otherwise, displays the number
+# In a list format
+for i in $(seq 1 100);
+do
+    if [ $((i % 15)) -eq 0 ]; then
+	echo "FizzBuzz"
+    elif [ $((i % 3)) -eq 0 ]; then
+	echo "Fizz"
+    elif [ $((i % 5)) -eq 0 ]; then
+	echo "Buzz"
+    else
+	echo "$i"
+    fi
+done
