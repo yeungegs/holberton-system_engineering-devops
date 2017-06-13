@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # This script displays Holberton School 10 times using until loop
+
 i=1
 until [ $i -ge 11 ]
 do
     echo "Holberton School"
-    i=$(( i + 1 ))    
+    let i+=1
 done
+
