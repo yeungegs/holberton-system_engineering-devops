@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 # this script displays the content of the file /etc/password, using the while loop + IFS.
 
-while read -r line; do
-    USERNAME="$(echo "$line" | cut -d':' -f1)"
-    GID="$(echo "$line" | cut -d':' -f4)"
-    HOME="$(echo "$line" | cut -d':' -f6)"
-    CMD="$(echo "$line" | cut -d':' -f7)"
-    USID="$(echo "$line" | cut -d':' -f3)"
-    PASSWD="$(echo "$line" | cut -d':' -f2)"
-    INFO="$(echo "$line" | cut -d':' -f5)"    
-    echo "The user $USERNAME is part of the $GID gang, lives in $HOME and rides $CMD. $USID's place is protected by the passcode $PASSWD, more info about the user here: $INFO"
+while IFS=":" read -r f1 f2 f3 f4 f5 f6 f7; do  
+    echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
 done < /etc/passwd
