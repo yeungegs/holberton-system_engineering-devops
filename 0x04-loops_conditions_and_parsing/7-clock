@@ -11,6 +11,6 @@ while [ $h -le 12 ]; do
 	echo $m
 	let m+=1
     done
-    let m=0
+    let m=1
     let h+=1
 done
