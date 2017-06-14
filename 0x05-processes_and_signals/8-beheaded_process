@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-# This script INSERT DESCRIPTION HERE
+# This script kills the process 7-highlander
+killall -s SIGINT -r highlander
