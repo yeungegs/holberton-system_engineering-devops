@@ -9,4 +9,3 @@ while [ true ]; do
     echo "to infinity and beyond"
     sleep 2
 done
-
