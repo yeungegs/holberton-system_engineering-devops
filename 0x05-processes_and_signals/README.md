@@ -12,35 +12,6 @@
 >11-zombie.c
 >12-screencast_unix_signal
  
-					                  <li>
-											        <li>
-																      <li>
-																					    <li>
-																										  <li>
-																														       <li>
-																																			     <li>
-																																								   <li>
-																																												         <li>
-																																																	       <li>
-																																																						     <li>
-<li>
-																						                      <li>
-																										  <li>
-																											      <li>
-																													  <li>
-																														      <li>
-																															         <li>
-																																	     <li>
-																																		         <li>
-																																				     <li>
-																																					         <li>
-																																							     <li>
-<li>
-								                      <li><a rel="nofollow" data-method="delete" href="/auth/sign_out">Log out</a></li>
-  <p>
-<p>
-  <p>
-  <p>
 <li><a href="http://www.linfo.org/pid.html">Linux PID</a></li>
 <li><a href="http://www.thegeekstuff.com/2012/03/linux-processes-environment/">Linux process</a></li>
 <li><p><a href="http://www.thegeekstuff.com/2012/03/linux-signals-fundamentals/">Linux signal</a></p></li>
