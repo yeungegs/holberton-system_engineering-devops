@@ -2,7 +2,7 @@
 
 # 0x06. SSH
 
-### Author: Elaine Yeung
+### Author: Elaine Yeung [<img src="https://user-images.githubusercontent.com/23224088/27935507-4e614b68-6260-11e7-8b20-d0352ef3ff53.png" height="18px"/>](https://twitter.com/egsy) 
 
 ## Synopsis
 This project introduces the concepts of **server management** in software development.
