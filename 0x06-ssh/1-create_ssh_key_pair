@@ -1,1 +1,4 @@
-#!/usr/bin/
+#!/usr/bin/env bash
+# a Bash script that creates a RSA key pair
+
+ssh-keygen -f holberton -b 4096 -N 98b4773ry
