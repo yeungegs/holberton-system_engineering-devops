@@ -1,1 +1,4 @@
-#!/usr/bin/
+#!/usr/bin/env bash
+# pings 5 times
+
+ping -c 5 $1

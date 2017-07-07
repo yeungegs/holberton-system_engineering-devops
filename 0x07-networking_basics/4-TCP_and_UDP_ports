@@ -1,1 +1,4 @@
-#!/usr/bin/
+#!/usr/bin/env bash
+# displays listening port
+
+sudo netstat -plnt
