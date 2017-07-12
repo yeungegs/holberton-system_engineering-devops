@@ -12,8 +12,8 @@ new_string="rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu
 file="/etc/nginx/sites-available/default"
 sed -i "26i $new_string" $file
 # Configure your Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
-# service nginx restart && service nginx reload
 new_string_404='\     rewrite ^/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;location /xyz{ return 404;}error_page 404 /404.html;location = /404.html {root /usr/share/nginx/html;internal;}# Make site accessible from http://localhost/server_name localhost;'
 sed -i "26i $new_string_404" $file
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
 service nginx restart && service nginx reload
+
