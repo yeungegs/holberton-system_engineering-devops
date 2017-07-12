@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # redirection must be a "301 moved permanently"
-sudo apt-get update
-sudo apt-get -y install nginx
+apt-get update
+apt-get -y install nginx
+service nginx start
 new_string="rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
 file="/etc/nginx/sites-available/default"
-sudo sed -i "26i $new_string" $file
-sudo service nginx start
+sed -i "26i $new_string" $file
+service nginx restart && service nginx reload
