@@ -25,7 +25,16 @@
   * Then a TCP connection is established for data transmission!
 
 ##	3. Firewall
+
 ##	4. HTTPS/SSL
+
+  * The browser sends an HTTP request to the web server.
+  * Once the TCP connection is established, browser sends GET request asking for www.holbertonschool.com web page. 
+      * If you’re entering credentials or submitting a form this could be a POST request. This request will also contain additional information such as browser identification (User-Agent header), types of requests that it will accept (Accept header), and connection headers asking it to keep the TCP connection alive for additional requests. It will also pass information taken from cookies the browser has in store for this domain.
+  * dddd
+* ddd
+	  
+  
 ##	5. Load-balancer
 ##	6. Web server
 ##	7. Application server
