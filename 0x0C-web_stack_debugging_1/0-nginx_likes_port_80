@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #shell script to configure a server to the following requirements
 #Nginx must be running, and listening on port 80 of all the server's active IPv4 IPs
-apt-get update
-apt-get -y install nginx
-service nginx start
+cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
