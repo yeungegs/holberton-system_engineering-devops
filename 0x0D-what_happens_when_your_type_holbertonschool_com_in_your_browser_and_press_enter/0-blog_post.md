@@ -1,9 +1,9 @@
 *User types https://www.holbertonschool.com into your browser and press Enter.*
-Browser splits what you type (the URL) into a hostname and a path.
-Browser forms an HTTP request to ask for the data at the given hostname and path.
-Browser performs DNS lookup to resolve the hostname into an IP address.
- The browser checks the cache for a DNS record to find the corresponding IP address of holbertonschool.com.
-
+*Browser splits what you type (the URL) into a hostname and a path.
+*Browser forms an HTTP request to ask for the data at the given hostname and path.
+*Browser performs DNS lookup to resolve the hostname into an IP address.
+* The browser checks the cache for a DNS record to find the corresponding IP address of holbertonschool.com.
+  * 
   * DNS(Domain Name System) is a database that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it. The IP address belongs to physical server that hosts the server of the website we are requesting to access. 
   * If the requested URL is not in the cache, ISP’s DNS server initiates a DNS query to find the IP address of the server that hosts www.holbertonschool.com
   
@@ -17,14 +17,14 @@ Browser forms a TCP/IP connection to the computer specified via the IP address. 
   * The client will receive the SYN/ACK packet from the server and will acknowledge it by sending an ACK packet.
   * Then a TCP connection is established for data transmission!
 
-Browser sends the HTTP request down the connection to the given IP address.
-That computer receives the HTTP request from the TCP/IP connection and passes it to the web server program.
-Web server reads the hostname and path and finds or generates the data that you've asked for.
-Web server generates an HTTP response containing that data.
-Web server sends that HTTP response back down the TCP/IP connection to your machine.
-Browser receives the HTTP response and splits it into headers (describing the data) and the body (the data itself).
-Browser interprets the data to decide how to display it in the browser - typically this is HTML data that specifies types of information and their general form.
-Some of the data will be metadata that specifies further resources that need to be loaded, such as style sheets for detailed layout, or inline images, or Flash movies. This metadata is specified again as a URL, and this whole process repeats for each one until all are loaded.
+*Browser sends the HTTP request down the connection to the given IP address.
+*That computer receives the HTTP request from the TCP/IP connection and passes it to the web server program.
+*Web server reads the hostname and path and finds or generates the data that you've asked for.
+*Web server generates an HTTP response containing that data.
+*Web server sends that HTTP response back down the TCP/IP connection to your machine.
+*Browser receives the HTTP response and splits it into headers (describing the data) and the body (the data itself).
+*Browser interprets the data to decide how to display it in the browser - typically this is HTML data that specifies types of information and their general form.
+*Some of the data will be metadata that specifies further resources that need to be loaded, such as style sheets for detailed layout, or inline images, or Flash movies. This metadata is specified again as a URL, and this whole process repeats for each one until all are loaded.
 
 
 * The server sends out an HTTP response.
