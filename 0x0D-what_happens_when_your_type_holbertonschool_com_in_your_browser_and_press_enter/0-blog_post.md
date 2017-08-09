@@ -1,4 +1,4 @@
-# Requirements, your post must cover:
+**Requirements, your post must cover:**
   * DNS request
   * TCP/IP
   * Firewall
@@ -8,7 +8,7 @@
   * Application server
   * Database
 								
-## User types https://www.holbertonschool.com into your browser and press Enter.
+*User types https://www.holbertonschool.com into your browser and press Enter.*
 
 ## 1. The browser checks the cache for a DNS record to find the corresponding IP address of holbertonschool.com.
 
