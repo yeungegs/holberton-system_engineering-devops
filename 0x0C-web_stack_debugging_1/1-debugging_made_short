@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #shell script to configure a server like Task 0 but in 5 lines or less
 cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+service stop nginx
