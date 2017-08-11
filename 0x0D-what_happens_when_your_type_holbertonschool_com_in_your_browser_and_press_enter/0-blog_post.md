@@ -101,124 +101,115 @@ One technique to keep data updates cheap is to defer some of the work to a batch
 										
 ## Web server generates an HTTP response containing that data.
 										
-										## Web server sends that HTTP response back down the TCP/IP connection to your machine.
-										
-										## Browser receives the HTTP response and splits it into headers (describing the data) and the body (the data itself).
-										
-										### 7\. The server sends back a HTML response
-										
-										![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image10.png "image")
-										
-										Here is the response that the server generated and sent back:
-										
-										```
-										HTTP/1.1 200 OK
-										Cache-Control: private, no-store, no-cache, must-revalidate, post-check=0,
-										    pre-check=0
-											Expires: Sat, 01 Jan 2000 00:00:00 GMT
-											P3P: CP="DSP LAW"
-											Pragma: no-cache
-											Content-Encoding: gzip
-											Content-Type: text/html; charset=utf-8
-											X-Cnection: close
-											Transfer-Encoding: chunked
-											Date: Fri, 12 Feb 2010 09:05:55 GMT
+## Web server sends that HTTP response back down the TCP/IP connection to your machine.
+
+## Browser receives the HTTP response and splits it into headers (describing the data) and the body (the data itself).
+
+### 7\. The server sends back a HTML response
+
+![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image10.png "image")
+
+Here is the response that the server generated and sent back:
+	
+	```
+	HTTP/1.1 200 OK
+	Cache-Control: private, no-store, no-cache, must-revalidate, post-check=0,
+    pre-check=0
+	Expires: Sat, 01 Jan 2000 00:00:00 GMT
+	P3P: CP="DSP LAW"
+	Pragma: no-cache
+	Content-Encoding: gzip
+	Content-Type: text/html; charset=utf-8
+	X-Cnection: close
+	Transfer-Encoding: chunked
+	Date: Fri, 12 Feb 2010 09:05:55 GMT
+	
+	2b3  
+	��������T�n�@����<font style="color: lightblue">[...]</font>
+	```
+The entire response is 36 kB, the bulk of them in the byte blob at the end that I trimmed.
+		
+The **Content-Encoding** header tells the browser that the response body is compressed using the gzip algorithm. After decompressing the blob, you’ll see the HTML you’d expect:
 											
-											2b3  
-											��������T�n�@����<font style="color: lightblue">[...]</font>
-											```
-											
-											The entire response is 36 kB, the bulk of them in the byte blob at the end that I trimmed.
-											
-											The **Content-Encoding** header tells the browser that the response body is compressed using the gzip algorithm. After decompressing the blob, you’ll see the HTML you’d expect:
-											
-											<pre><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   
-											      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-												  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
-												        lang="en" id="facebook" class=" no_js">
-														<head>
-														<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-														<meta http-equiv="Content-language" content="en" />
-														...</pre>
+	<pre><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
+	lang="en" id="facebook" class=" no_js">
+	<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-language" content="en" />
+	...</pre>
+	
+In addition to compression, headers specify whether and how to cache the page, any cookies to set (none in this response), privacy information, etc.
 														
-														In addition to compression, headers specify whether and how to cache the page, any cookies to set (none in this response), privacy information, etc.
+Notice the header that sets **Content-Type** to **text/html**. The header instructs the browser to render the response content as HTML, instead of say downloading it as a file. The browser will use the header to decide how to interpret the response, but will consider other factors as well, such as the extension of the URL.
 														
-														
-														
-														Notice the header that sets **Content-Type** to **text/html**. The header instructs the browser to render the response content as HTML, instead of say downloading it as a file. The browser will use the header to decide how to interpret the response, but will consider other factors as well, such as the extension of the URL.
-														
-														
-														## Browser interprets the data to decide how to display it in the browser - typically this is HTML data that specifies types of information and their general form.
-														
-														### 8\. The browser begins rendering the HTML
-														
-														Even before the browser has received the entire HTML document, it begins rendering the website:
-														
-														 ![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image6.png "image")
+
+## Browser interprets the data to decide how to display it in the browser - typically this is HTML data that specifies types of information and their general form.
+
+### 8\. The browser begins rendering the HTML
+
+Even before the browser has received the entire HTML document, it begins rendering the website:
+
+### 9\. The browser sends requests for objects embedded in HTML
 														 
-														 ### 9\. The browser sends requests for objects embedded in HTML
+![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image11.png "image")
 														 
-														 ![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image11.png "image")
+As the browser renders the HTML, it will notice tags that require fetching of other URLs. The browser will send a GET request to retrieve each of these files.
 														 
-														 As the browser renders the HTML, it will notice tags that require fetching of other URLs. The browser will send a GET request to retrieve each of these files.
-														 
-														 Here are a few URLs that my visit to facebook.com retrieved:
-														 
-														 *   **Images  
-														     **http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif  
-															     http://static.ak.fbcdn.net/rsrc.php/zBS5C/hash/7hwy7at6.gif  
-																     …
-																	 *   **CSS style sheets  
-																	     **http://static.ak.fbcdn.net/rsrc.php/z448Z/hash/2plh8s4n.css  
-																		     http://static.ak.fbcdn.net/rsrc.php/zANE1/hash/cvtutcee.css  
-																			     …
-																				 *   **JavaScript files**  
-																				     http://static.ak.fbcdn.net/rsrc.php/zEMOA/hash/c8yzb6ub.js  
-																					     http://static.ak.fbcdn.net/rsrc.php/z6R9L/hash/cq2lgbs8.js  
+Here are a few URLs that my visit to facebook.com retrieved:
+
+ *   **Images**http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif  
+	     http://static.ak.fbcdn.net/rsrc.php/zBS5C/hash/7hwy7at6.gif  
+		     …
+ *   **CSS style sheets**http://static.ak.fbcdn.net/rsrc.php/z448Z/hash/2plh8s4n.css  
+ http://static.ak.fbcdn.net/rsrc.php/zANE1/hash/cvtutcee.css  
+ …
+ *   **JavaScript files** http://static.ak.fbcdn.net/rsrc.php/zEMOA/hash/c8yzb6ub.js  
+							     http://static.ak.fbcdn.net/rsrc.php/z6R9L/hash/cq2lgbs8.js  
 																						     …
-																							 
-																							 Each of these URLs will go through process a similar to what the HTML page went through. So, the browser will look up the domain name in DNS, send a request to the URL, follow redirects, etc.
-																							 
-																							 However, static files – unlike dynamic pages – allow the browser to cache them. Some of the files may be served up from cache, without contacting the server at all. The browser knows how long to cache a particular file because the response that returned the file contained an Expires header. Additionally, each response may also contain an ETag header that works like a version number – if the browser sees an ETag for a version of the file it already has, it can stop the transfer immediately.
-																							 
-																							 Can you guess what **“fbcdn.net”** in the URLs stands for? A safe bet is that it means “Facebook content delivery network”. Facebook uses a content delivery network (CDN) to distribute static content – images, style sheets, and JavaScript files. So, the files will be copied to many machines across the globe.
-																							 
-																							 Static content often represents the bulk of the bandwidth of a site, and can be easily replicated across a CDN. Often, sites will use a third-party CDN provider, instead of operating a CND themselves. For example, Facebook’s static files are hosted by Akamai, the largest CDN provider.
-																							 
-																							 As a demonstration, when you try to ping static.ak.fbcdn.net, you will get a response from an akamai.net server. Also, interestingly, if you ping the URL a couple of times, may get responses from different servers, which demonstrates the load-balancing that happens behind the scenes.
-																							 
-																							 ### 10\. The browser sends further asynchronous (AJAX) requests
-																							 
-																							 ![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image12.png "image")
-																							 
-																							 In the spirit of Web 2.0, the client continues to communicate with the server even after the page is rendered.
-																							 
-																							 For example, Facebook chat will continue to update the list of your logged in friends as they come and go. To update the list of your logged-in friends, the JavaScript executing in your browser has to send an asynchronous request to the server. The asynchronous request is a programmatically constructed GET or POST request that goes to a special URL. In the Facebook example, the client sends a POST request to http://www.facebook.com/ajax/chat/buddy_list.php to fetch the list of your friends who are online.
-																							 
-																							 This pattern is sometimes referred to as “AJAX”, which stands for “Asynchronous JavaScript And XML”, even though there is no particular reason why the server has to format the response as XML. For example, Facebook returns snippets of JavaScript code in response to asynchronous requests.
-																							 
-																							 Among other things, the fiddler tool lets you view the asynchronous requests sent by your browser. In fact, not only you can observe the requests passively, but you can also modify and resend them. The fact that it is this easy to “spoof” AJAX requests causes a lot of grief to developers of online games with scoreboards. (Obviously, please don’t cheat that way.)
-																							 
-																							 Facebook chat provides an example of an interesting problem with AJAX: pushing data from server to client. Since HTTP is a request-response protocol, the chat server cannot push new messages to the client. Instead, the client has to poll the server every few seconds to see if any new messages arrived.
-																							 
-																							 [Long polling](http://en.wikipedia.org/wiki/Push_technology#Long_polling) is an interesting technique to decrease the load on the server in these types of scenarios. If the server does not have any new messages when polled, it simply does not send a response back. And, if a message for this client is received within the timeout period, the server will find the outstanding request and return the message with the response.
-																							 
-																							 
-																							 
-																							 # Sources
-																							 
-																							 
-																							 
-																							 
-																							 
-																							 
-																							 [What really happens when you navigate to a URL](http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url)
-																							 
-																							 As a software developer, you certainly have a high-level picture of how web apps work and what kinds of technologies are involved: the browser, HTTP, HTML, web server, request handlers, and so on.
-																							 
-																							 In this article, we will take a deeper look at the sequence of events that take place when you visit a URL.
-																							 
-																							 https://stackoverflow.com/questions/5165310/what-is-the-complete-process-from-entering-a-url-to-the-browsers-address-bar-to
-																							 
-																							 https://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser
+Each of these URLs will go through process a similar to what the HTML page went through. So, the browser will look up the domain name in DNS, send a request to the URL, follow redirects, etc.
+
+However, static files – unlike dynamic pages – allow the browser to cache them. Some of the files may be served up from cache, without contacting the server at all. The browser knows how long to cache a particular file because the response that returned the file contained an Expires header. Additionally, each response may also contain an ETag header that works like a version number – if the browser sees an ETag for a version of the file it already has, it can stop the transfer immediately.
+
+Can you guess what **“fbcdn.net”** in the URLs stands for? A safe bet is that it means “Facebook content delivery network”. Facebook uses a content delivery network (CDN) to distribute static content – images, style sheets, and JavaScript files. So, the files will be copied to many machines across the globe.
+
+Static content often represents the bulk of the bandwidth of a site, and can be easily replicated across a CDN. Often, sites will use a third-party CDN provider, instead of operating a CND themselves. For example, Facebook’s static files are hosted by Akamai, the largest CDN provider.
+
+As a demonstration, when you try to ping static.ak.fbcdn.net, you will get a response from an akamai.net server. Also, interestingly, if you ping the URL a couple of times, may get responses from different servers, which demonstrates the load-balancing that happens behind the scenes.
+
+### 10\. The browser sends further asynchronous (AJAX) requests
+
+![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image12.png "image")
+
+In the spirit of Web 2.0, the client continues to communicate with the server even after the page is rendered.
+
+For example, Facebook chat will continue to update the list of your logged in friends as they come and go. To update the list of your logged-in friends, the JavaScript executing in your browser has to send an asynchronous request to the server. The asynchronous request is a programmatically constructed GET or POST request that goes to a special URL. In the Facebook example, the client sends a POST request to http://www.facebook.com/ajax/chat/buddy_list.php to fetch the list of your friends who are online.
+
+This pattern is sometimes referred to as “AJAX”, which stands for “Asynchronous JavaScript And XML”, even though there is no particular reason why the server has to format the response as XML. For example, Facebook returns snippets of JavaScript code in response to asynchronous requests.
+
+Among other things, the fiddler tool lets you view the asynchronous requests sent by your browser. In fact, not only you can observe the requests passively, but you can also modify and resend them. The fact that it is this easy to “spoof” AJAX requests causes a lot of grief to developers of online games with scoreboards. (Obviously, please don’t cheat that way.)
+
+Facebook chat provides an example of an interesting problem with AJAX: pushing data from server to client. Since HTTP is a request-response protocol, the chat server cannot push new messages to the client. Instead, the client has to poll the server every few seconds to see if any new messages arrived.
+
+[Long polling](http://en.wikipedia.org/wiki/Push_technology#Long_polling) is an interesting technique to decrease the load on the server in these types of scenarios. If the server does not have any new messages when polled, it simply does not send a response back. And, if a message for this client is received within the timeout period, the server will find the outstanding request and return the message with the response.
+
+
+
+# Sources
+
+
+
+
+
+
+[What really happens when you navigate to a URL](http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url)
+
+As a software developer, you certainly have a high-level picture of how web apps work and what kinds of technologies are involved: the browser, HTTP, HTML, web server, request handlers, and so on.
+
+In this article, we will take a deeper look at the sequence of events that take place when you visit a URL.
+
+https://stackoverflow.com/questions/5165310/what-is-the-complete-process-from-entering-a-url-to-the-browsers-address-bar-to
+
+https://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser
 																							 
