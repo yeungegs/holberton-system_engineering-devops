@@ -34,8 +34,6 @@ Most of the DNS servers themselves use anycast to achieve high availability and 
 
 ### The browser sends a HTTP request to the web server
 
-![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image22.png "image")
-
 You can be pretty sure that Facebook’s homepage will not be served from the browser cache because dynamic pages expire either very quickly or immediately (expiry date set to past).
 
 So, the browser will send this request to the Facebook server:
@@ -82,32 +80,26 @@ The browser now knows that “http://www.holbertonschool.com” is the correct U
 							
 	The meaning of the headers is the same as for the first request.
 	
-	## That computer receives the HTTP request from the TCP/IP connection and passes it to the web server program.
+## That computer receives the HTTP request from the TCP/IP connection and passes it to the web server program.
 	
-	## Web server reads the hostname and path and finds or generates the data that you've asked for.
+## Web server reads the hostname and path and finds or generates the data that you've asked for.
 	
-	### 6\. The server ‘handles’ the request
+### 6\. The server ‘handles’ the request
 	
-	![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image9.png "image")
-	
-	The server will receive the GET request, process it, and send back a response.
+The server will receive the GET request, process it, and send back a response.
 							
-							This may seem like a straightforward task, but in fact there is a lot of interesting stuff that happens here – even on a simple site like my blog, let alone on a massively scalable site like facebook.
+This may seem like a straightforward task, but in fact there is a lot of interesting stuff that happens here – even on a simple site like my blog, let alone on a massively scalable site like facebook.
 							
-							*   **Web server software  
-							    **The web server software (e.g., IIS or Apache) receives the HTTP request and decides which request handler should be executed to handle this request. A request handler is a program (in ASP.NET, PHP, Ruby, …) that reads the request and generates the HTML for the response.
-								
-								    In the simplest case, the request handlers can be stored in a file hierarchy whose structure mirrors the URL structure, and so for example [http://example.com/folder1/page1.aspx](http://example.com/folder1/page1.aspx) URL will map to file /httpdocs/folder1/page1.aspx. The web server software can also be configured so that URLs are manually mapped to request handlers, and so the public URL of page1.aspx could be [http://example.com/folder1/page1](http://example.com/folder1/page1).
-									
-									*   **Request handler  
-									    **The request handler reads the request, its parameters, and cookies. It will read and possibly update some data stored on the server. Then, the request handler will generate a HTML response.
+*   **Web server software** The web server software (e.g., IIS or Apache) receives the HTTP request and decides which request handler should be executed to handle this request. A request handler is a program (in ASP.NET, PHP, Ruby, …) that reads the request and generates the HTML for the response.
+    In the simplest case, the request handlers can be stored in a file hierarchy whose structure mirrors the URL structure, and so for example [http://example.com/folder1/page1.aspx](http://example.com/folder1/page1.aspx) URL will map to file /httpdocs/folder1/page1.aspx. The web server software can also be configured so that URLs are manually mapped to request handlers, and so the public URL of page1.aspx could be [http://example.com/folder1/page1](http://example.com/folder1/page1).
+*   **Request handler** The request handler reads the request, its parameters, and cookies. It will read and possibly update some data stored on the server. Then, the request handler will generate a HTML response.
 										
-										One interesting difficulty that every dynamic website faces is how to store data. Smaller sites will often have a single SQL database to store their data, but sites that store a large amount of data and/or have many visitors have to find a way to split the database across multiple machines. Solutions include sharding (splitting up a table across multiple databases based on the primary key), replication, and usage of simplified databases with weakened consistency semantics.
-										
-										One technique to keep data updates cheap is to defer some of the work to a batch job. For example, Facebook has to update the newsfeed in a timely fashion, but the data backing the “People you may know” feature may only need to be updated nightly (my guess, I don’t actually know how they implement this feature). Batch job updates result in staleness of some less important data, but can make data updates much faster and simpler.
+One interesting difficulty that every dynamic website faces is how to store data. Smaller sites will often have a single SQL database to store their data, but sites that store a large amount of data and/or have many visitors have to find a way to split the database across multiple machines. Solutions include sharding (splitting up a table across multiple databases based on the primary key), replication, and usage of simplified databases with weakened consistency semantics.
+
+One technique to keep data updates cheap is to defer some of the work to a batch job. For example, Facebook has to update the newsfeed in a timely fashion, but the data backing the “People you may know” feature may only need to be updated nightly (my guess, I don’t actually know how they implement this feature). Batch job updates result in staleness of some less important data, but can make data updates much faster and simpler.
 										
 										
-										## Web server generates an HTTP response containing that data.
+## Web server generates an HTTP response containing that data.
 										
 										## Web server sends that HTTP response back down the TCP/IP connection to your machine.
 										
