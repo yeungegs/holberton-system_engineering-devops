@@ -38,21 +38,31 @@ You can be pretty sure that Facebook’s homepage will not be served from the br
 
 So, the browser will send this request to the Facebook server:
 
-<pre class="code">GET http://facebook.com/ HTTP/1.1
-Accept: application/x-ms-application, image/jpeg, application/xaml+xml, <font style="color: lightblue">[...]</font>
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; <font style="color: lightblue">[...]</font>
-Accept-Encoding: gzip, deflate
-Connection: Keep-Alive
-Host: facebook.com
-Cookie: datr=1265876274-<font style="color: lightblue">[...]</font>; locale=en_US; lsd=WW<font style="color: lightblue">[...]</font>; c_user=2101<font style="color: lightblue">[...]</font></pre>
+Request URL:https://www.holbertonschool.com/
+Request Method:GET
+Status Code:200 OK
+Remote Address:52.206.180.197:443
+Referrer Policy:no-referrer-when-downgrade
+
+```
+GET / HTTP/1.1
+Host: www.holbertonschool.com
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: _ga=GA1.2.327418229.1502432403; _gid=GA1.2.1988454284.1502432403; _holberton_session=S1Y4WkJuMWJCTGZUU2RwNjBzR0M1MFE5YXIxUG5Fci9xc3d3Smdvekg4MzN5eURKZndMV2gyNkkya1MyTGNuUjB6MmFDaHJvcGg1M1BQUXBFdGZOWHV2NDBUVUZxYlVnaTFIS0xURzB6SklmZnR1MGZtc2loYzlEMlhiOGZFclJvNnhDWFkrSDI2M3ZRaGpnc2trZTR3PT0tLUFxRlFFRFVuUjlKNVVpMXpMeVY0dXc9PQ%3D%3D--14c4361956c2b61999f8a02b87aec5c76d7f0d56
+DNT: 1
+If-None-Match: W/"84d46cf170956ba8f7ca6ff9aab3f28f"
+```
 
 The GET request names the **URL** to fetch**:** “http://facebook.com/”. The browser identifies itself (**User-Agent** header), and states what types of responses it will accept (**Accept** and **Accept-Encoding** headers). The **Connection** header asks the server to keep the TCP connection open for further requests.
 
 The request also contains the **cookies** that the browser has for this domain. As you probably already know, cookies are key-value pairs that track the state of a web site in between different page requests. And so the cookies store the name of the logged-in user, a secret number that was assigned to the user by the server, some of user’s settings, etc. The cookies will be stored in a text file on the client, and sent to the server with every request.
 
-There is a variety of tools that let you view the raw HTTP requests and corresponding responses. My favorite tool for viewing the raw HTTP traffic is [fiddler](http://www.fiddler2.com/fiddler2/), but there are many other tools (e.g., FireBug) These tools are a great help when optimizing a site.
-<hr>
-In addition to GET requests, another type of requests that you may be familiar with is a POST request, typically used to submit forms. A GET request sends its parameters via the URL (e.g.: http://robozzle.com/puzzle.aspx**?id=85**). A POST request sends its parameters in the request body, just under the headers.
+In addition to GET requests, another type of requests that you may be familiar with is a POST request, typically used to submit forms. A GET request sends its parameters via the URL. A POST request sends its parameters in the request body, just under the headers.
 
 The trailing slash in the URL “http://facebook.com/” is important. In this case, the browser can safely add the slash. For URLs of the form http://example.com/folderOrFile, the browser cannot automatically add a slash, because it is not clear whether folderOrFile is a folder or a file. In such cases, the browser will visit the URL without the slash, and the server will respond with a redirect, resulting in an unnecessary roundtrip.
 
@@ -84,7 +94,7 @@ The browser now knows that “http://www.holbertonschool.com” is the correct U
 	
 ## Web server reads the hostname and path and finds or generates the data that you've asked for.
 	
-### 6\. The server ‘handles’ the request
+### The server ‘handles’ the request
 	
 The server will receive the GET request, process it, and send back a response.
 							
@@ -105,27 +115,25 @@ One technique to keep data updates cheap is to defer some of the work to a batch
 
 ## Browser receives the HTTP response and splits it into headers (describing the data) and the body (the data itself).
 
-### 7\. The server sends back a HTML response
-
-![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image10.png "image")
+### The server sends back a HTML response
 
 Here is the response that the server generated and sent back:
 	
 	```
 	HTTP/1.1 200 OK
-	Cache-Control: private, no-store, no-cache, must-revalidate, post-check=0,
-    pre-check=0
-	Expires: Sat, 01 Jan 2000 00:00:00 GMT
-	P3P: CP="DSP LAW"
-	Pragma: no-cache
-	Content-Encoding: gzip
+	Cache-Control: max-age=0, private, must-revalidate
 	Content-Type: text/html; charset=utf-8
-	X-Cnection: close
-	Transfer-Encoding: chunked
-	Date: Fri, 12 Feb 2010 09:05:55 GMT
-	
-	2b3  
-	��������T�n�@����<font style="color: lightblue">[...]</font>
+	Date: Fri, 11 Aug 2017 06:44:25 GMT
+	ETag: W/"[...]"
+	Server: nginx/1.10.2
+	Set-Cookie: [...]; path=/; HttpOnly
+	X-Content-Type-Options: nosniff
+	X-Frame-Options: SAMEORIGIN
+	X-Request-Id: [...]
+	X-Runtime: 0.036422
+	X-XSS-Protection: 1; mode=block
+	Content-Length: 38278
+	Connection: keep-alive
 	```
 The entire response is 36 kB, the bulk of them in the byte blob at the end that I trimmed.
 		
@@ -147,11 +155,11 @@ Notice the header that sets **Content-Type** to **text/html**. The header instru
 
 ## Browser interprets the data to decide how to display it in the browser - typically this is HTML data that specifies types of information and their general form.
 
-### 8\. The browser begins rendering the HTML
+### The browser begins rendering the HTML
 
 Even before the browser has received the entire HTML document, it begins rendering the website:
 
-### 9\. The browser sends requests for objects embedded in HTML
+### The browser sends requests for objects embedded in HTML
 														 
 ![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image11.png "image")
 														 
@@ -178,31 +186,8 @@ Static content often represents the bulk of the bandwidth of a site, and can be 
 
 As a demonstration, when you try to ping static.ak.fbcdn.net, you will get a response from an akamai.net server. Also, interestingly, if you ping the URL a couple of times, may get responses from different servers, which demonstrates the load-balancing that happens behind the scenes.
 
-### 10\. The browser sends further asynchronous (AJAX) requests
-
-![image](http://igoro.com/wordpress/wp-content/uploads/2010/02/image12.png "image")
-
-In the spirit of Web 2.0, the client continues to communicate with the server even after the page is rendered.
-
-For example, Facebook chat will continue to update the list of your logged in friends as they come and go. To update the list of your logged-in friends, the JavaScript executing in your browser has to send an asynchronous request to the server. The asynchronous request is a programmatically constructed GET or POST request that goes to a special URL. In the Facebook example, the client sends a POST request to http://www.facebook.com/ajax/chat/buddy_list.php to fetch the list of your friends who are online.
-
-This pattern is sometimes referred to as “AJAX”, which stands for “Asynchronous JavaScript And XML”, even though there is no particular reason why the server has to format the response as XML. For example, Facebook returns snippets of JavaScript code in response to asynchronous requests.
-
-Among other things, the fiddler tool lets you view the asynchronous requests sent by your browser. In fact, not only you can observe the requests passively, but you can also modify and resend them. The fact that it is this easy to “spoof” AJAX requests causes a lot of grief to developers of online games with scoreboards. (Obviously, please don’t cheat that way.)
-
-Facebook chat provides an example of an interesting problem with AJAX: pushing data from server to client. Since HTTP is a request-response protocol, the chat server cannot push new messages to the client. Instead, the client has to poll the server every few seconds to see if any new messages arrived.
-
-[Long polling](http://en.wikipedia.org/wiki/Push_technology#Long_polling) is an interesting technique to decrease the load on the server in these types of scenarios. If the server does not have any new messages when polled, it simply does not send a response back. And, if a message for this client is received within the timeout period, the server will find the outstanding request and return the message with the response.
-
-
 
 # Sources
-
-
-
-
-
-
 [What really happens when you navigate to a URL](http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url)
 
 As a software developer, you certainly have a high-level picture of how web apps work and what kinds of technologies are involved: the browser, HTTP, HTML, web server, request handlers, and so on.
