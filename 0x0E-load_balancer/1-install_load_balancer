@@ -1,1 +1,15 @@
 #!/usr/bin/env bash
+# sets up a load balancer
+sudo apt-get install haproxy
+echo ENABLED=1 | sudo tee /etc/default/haproxy
+
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+file=/etc/haproxy/haproxy.cfg
+
+sudo cp $file $file.copy
+
+sudo sed -i -e '$a\listen appname 0.0.0.0:80\n\tmode http\n\tstats enable' $file
+sudo sed -i -e '$a\\tbalance roundrobin\n\toption httpclose\n\toption forwardfor' $file
+sudo sed -i -e '$a\\tserver 116-web-01 66.70.184.210:80\n\tserver 116-web-02 142.44.164.128:80' $file
+
