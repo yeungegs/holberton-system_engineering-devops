@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Configure new webserver to run Nginx and set up so that its HTTP response contains a custom header
+# shellcheck disable=SC2154
 apt-get update
 apt-get install -y nginx
 service nginx start
