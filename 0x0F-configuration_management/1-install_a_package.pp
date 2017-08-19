@@ -1,1 +1,5 @@
-#!/usr/bin/env bash
+# puppet script to install puppet-lint
+package { 'puppet-lint':
+  ensure   => '1.1.0',
+  provider => 'gem',
+}
