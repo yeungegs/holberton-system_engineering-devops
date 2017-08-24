@@ -3,9 +3,9 @@
 # Bash script that displays information about subdomains
 domain="$1"
 subdomain="$2"
-allsubdomains=("www" "lb-01" "web-01" "web-02")
+allsubdomains=("www." "lb-01." "web-01." "web-02.")
 prettifydig () {
-    dig $subdomain"."$domain | grep -A1 ';; ANSWER SECTION:' | grep -v 'ANSWER' | awk -v awksub="$subdomain" '{printf "The subdomain %s is a %s record and points to %s\n", awksub, $4, $5o}'
+    dig $subdomain$domain | grep -A1 ';; ANSWER SECTION:' | grep -v 'ANSWER' | awk -v awksub="$subdomain" '{printf "The subdomain %s is a %s record and points to %s\n", awksub, $4, $5o}'
 }
 
 if [ $# -eq 1 ]
