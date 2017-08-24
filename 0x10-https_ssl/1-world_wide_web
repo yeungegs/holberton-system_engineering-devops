@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2086
 # Bash script that displays information about subdomains
+domain="$1"
+subdomain="$2"
+allsubdomains=("www" "lb-01" "web-01" "web-02")
 prettifydig () {
-    domain="$1"
-    subdomain="$2"
-    dig $domain"."$subdomain | grep -A1 ';; ANSWER SECTION:' | grep -v 'ANSWER' | awk -v awk_sub="$subdomain" '{printf "The subdomain %s is a %s record and points to %s\n", awk_sub, $4, $5}'
+    dig $subdomain"."$domain | grep -A1 ';; ANSWER SECTION:' | grep -v 'ANSWER' | tr '.' ' ' | awk '{printf "The subdomain %s is a %s record and points to %s\n", $1, $6, $7b}'
 }
 
-allsubdomains=("www" "lb-01" "web-01" "web-02")
 if [ $# -eq 1 ]
 then 
     for a in "${allsubdomains[@]}"
     do
 	prettifydig "$a" "$1"
     done
-elif [ $# -eq 2 ]
-then
-    prettifydig "$1" "$2"
+elif [ $# -eq 2 ]; then
+    prettifydig "$2" "$1"
 fi
