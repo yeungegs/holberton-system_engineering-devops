@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script that sets up linux net firewall to block all incoming traffic EXCEPT TCP 22, 443, 80 to only allow 22/443/80
+sudo apt-get install -y ufw
+ufw default deny incoming
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp
+ufw enable
