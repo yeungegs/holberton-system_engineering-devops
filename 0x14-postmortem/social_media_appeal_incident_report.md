@@ -15,19 +15,16 @@ _**Full disclosure: the author of this report is [@egsy](https://twitter.com/egs
 - which team/individuals was the incident escalated to
 - how the incident was resolved
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">the 10k msg limit kills my classmate&#39;s investment in <a href="https://twitter.com/SlackHQ">@SlackHQ</a>... how I wish they&#39;d recognize <a href="https://twitter.com/holbertonschool">@holbertonschool</a> for the ed discount💸💰 …</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009313638436864">August 8, 2017</a></blockquote>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">…since <a href="https://twitter.com/holbertonschool">@holbertonschool</a> is a non-traditional school and <a href="https://twitter.com/SlackHQ">@slackhq</a> is a non-traditional messaging platform, we should able to negotiate.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009426460917761">August 8, 2017</a></blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">idea💡set a goal number <a href="https://twitter.com/github">@github</a> commits that all <a href="https://twitter.com/holbertonschool">@holbertonschool</a> students here reach.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009609181667328">August 8, 2017</a></blockquote>
-
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009675569094657">August 8, 2017</a></blockquote>
-
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">by that metric, if all students <a href="https://twitter.com/holbertonschool">@holbertonschool</a> reach 100k commits by end of month, then <a href="https://twitter.com/SlackHQ">@slackhq</a> approves us for the ed discount? 🙏🤓</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010116377862144">August 8, 2017</a></blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">second idea💡name a number of thread retweets we need in order to receive the discount.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010316219670528">August 8, 2017</a></blockquote>
-
-
+Tweets | Impressions | Engagements | Engagement rate
+:--- | :--- | :--- | :---
+the 10k msg limit kills my classmate&#39;s investment in <a href="https://twitter.com/SlackHQ">@SlackHQ</a>... how I wish they&#39;d recognize <a href="https://twitter.com/holbertonschool">@holbertonschool</a> for the ed discount💸💰 …</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009313638436864">August 8, 2017</a>| 1,045|57|5.4%
+…since <a href="https://twitter.com/holbertonschool">@holbertonschool</a> is a non-traditional school and <a href="https://twitter.com/SlackHQ">@slackhq</a> is a non-traditional messaging platform, we should able to negotiate.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009426460917761">August 8, 2017</a> | 782|13|1.7%
+idea💡set a goal number <a href="https://twitter.com/github">@github</a> commits that all <a href="https://twitter.com/holbertonschool">@holbertonschool</a> students here reach.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009609181667328">August 8, 2017</a> | 842|12|1.4% 
+if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009675569094657">August 8, 2017</a>| 701|16|2.3%
+by that metric, if all students <a href="https://twitter.com/holbertonschool">@holbertonschool</a> reach 100k commits by end of month, then <a href="https://twitter.com/SlackHQ">@slackhq</a> approves us for the ed discount? 🙏🤓</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010116377862144">August 8, 2017</a>  |259| 5 | 1.9%
+second idea💡name a number of thread retweets we need in order to receive the discount.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010316219670528">August 8, 2017</a>  | 256| 6| 2.3% 
+I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a>/… | 341 |15 | 4.4%
 
 ##  Root cause and resolution
 
@@ -39,18 +36,3 @@ _**Full disclosure: the author of this report is [@egsy](https://twitter.com/egs
 - what are the things that can be improved/fixed
 - a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
 
-##   Be brief and straight to the point, between 400 to 600 words
-													
-While postmortem format can vary, stick to this one so that you can get properly reviewed by your peers.
-
-
-
-Tweets | Impressions | Engagements | Engagement rate
-:--- | :--- | :--- | :---
-Elaine Y @egsy  Aug 8 I was really expecting a more empathetic response from @SlackHQ 😔😔😔 twitter.com/jianqinwang94/… | 341 |15 | 4.4%
-Elaine Y @egsy  Aug 8 second idea💡name a number of thread retweets we need in order to receive the discount. | 256| 6| 2.3% 
-Elaine Y @egsy  Aug 8 by that metric, if all students @holbertonschool reach 100k commits by end of month, then @slackhq approves us for the ed discount? 🙏🤓 |259| 5 | 1.9%
-Elaine Y @egsy  Aug 8 if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since. | 701|16|2.3%
-Elaine Y @egsy  Aug 8 idea💡set a goal number @github commits that all @holbertonschool students here reach. | 842|12|1.4% 
-Elaine Y @egsy  Aug 8 …since @holbertonschool is a non-traditional school and @slackhq is a non-traditional messaging platform, we should able to negotiate. | 782|13|1.7%
-Elaine Y @egsy  Aug 8 the 10k msg limit kills my classmate's investment in @SlackHQ... how I wish they'd recognize @holbertonschool for the ed discount💸💰 … | 1,045|57|5.5%View Tweet activity
