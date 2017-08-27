@@ -1,10 +1,6 @@
-##   Issue Summary (that is often what executives will read) must contain:
+##   Issue Summary
 
-- duration of the outage with start and end times (including timezone)
-- what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
-- what was the root cause
-
-At 12:50 PM PDT on August 8, 2017, Twitter user [@egsy](https://twitter.com/egsy) launched a tweet campaign targeting [Slack](https://slack.com/). The goal of the campaign was to apply social pressure on Slack so that they would make an exception to their Slack for Education process and recognize Holberton School as a school. The parent tweet was retweeted 6 times and received 14 likes. Within three hours, Slack responded and held firm to their existing policy. The goal of receiving an education discount was not achieved, rendering the tweet campaign a failure.
+At 12:50 PM PDT on August 8, 2017, Twitter user [@egsy](https://twitter.com/egsy) launched a tweet campaign targeting [Slack](https://slack.com/). The goal of the campaign was to apply social pressure on Slack so that they would make an exception to their [Slack for Education](https://get.slack.help/hc/en-us/articles/206646877-Slack-for-Education) screening process and recognize [Holberton School](https://www.holbertonschool.com/) as an educational organization. The parent tweet was retweeted 6 times and received 14 likes. Within three hours, Slack responded and held firm to their existing policy. The goal of receiving an education discount was not achieved, rendering the tweet campaign a failure.
 
 ##   Timeline (format bullet point, format: `time` - `keep it short, 1 or 2 sentences`) must contain:
 
