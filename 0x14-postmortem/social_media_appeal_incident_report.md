@@ -1,8 +1,12 @@
+# Social Media Campaign Incident Report
+
 ##   Issue Summary
 
 At 12:50 PM PDT on August 8, 2017, Twitter user [@egsy](https://twitter.com/egsy) launched a tweet campaign targeting [Slack](https://slack.com/). The goal of the campaign was to apply social pressure on Slack so that they would make an exception to their [Slack for Education](https://get.slack.help/hc/en-us/articles/206646877-Slack-for-Education) screening process and recognize [Holberton School](https://www.holbertonschool.com/) as an educational organization. The parent tweet was retweeted 6 times and received 14 likes. Within three hours, Slack responded and held firm to their existing policy. The goal of receiving an education discount was not achieved, rendering the tweet campaign a failure.
 
-##   Timeline (format bullet point, format: `time` - `keep it short, 1 or 2 sentences`) must contain:
+_**Full disclosure: the author of this report is [@egsy](https://twitter.com/egsy).**_
+
+##   Timeline
 
 - when was the issue detected
 - how was the issue detected (monitoring alert, an engineer noticed something, a customer complained...)
@@ -25,12 +29,12 @@ At 12:50 PM PDT on August 8, 2017, Twitter user [@egsy](https://twitter.com/egsy
 
 
 
-##  Root cause and resolution must contain:
+##  Root cause and resolution
 
 - explain in detail what was causing the issue
 - explain in detail how the issue was fixed
 
-##   Corrective and preventative measures must contain:
+##   Corrective and preventative measures
 
 - what are the things that can be improved/fixed
 - a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
@@ -41,22 +45,12 @@ While postmortem format can vary, stick to this one so that you can get properly
 
 
 
-Tweets
-Top Tweets
-Tweets and replies
-Promoted
-ImpressionsEngagementsEngagement rate Elaine Y @egsy  Aug 8
-I was really expecting a more empathetic response from @SlackHQ 😔😔😔 twitter.com/jianqinwang94/…
-341154.4%View Tweet activity Elaine Y @egsy  Aug 8
-second idea💡name a number of thread retweets we need in order to receive the discount.
-25662.3%View Tweet activity Elaine Y @egsy  Aug 8
-by that metric, if all students @holbertonschool reach 100k commits by end of month, then @slackhq approves us for the ed discount? 🙏🤓
-25951.9%View Tweet activity Elaine Y @egsy  Aug 8
-if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since.
-701162.3%View Tweet activity Elaine Y @egsy  Aug 8
-idea💡set a goal number @github commits that all @holbertonschool students here reach.
-842121.4%View Tweet activity Elaine Y @egsy  Aug 8
-…since @holbertonschool is a non-traditional school and @slackhq is a non-traditional messaging platform, we should able to negotiate.
-782131.7%View Tweet activity Elaine Y @egsy  Aug 8
-the 10k msg limit kills my classmate's investment in @SlackHQ... how I wish they'd recognize @holbertonschool for the ed discount💸💰 …
-1,045575.5%View Tweet activity
+Tweets | Impressions | Engagements | Engagement rate
+:--- | :--- | :--- | :---
+Elaine Y @egsy  Aug 8 I was really expecting a more empathetic response from @SlackHQ 😔😔😔 twitter.com/jianqinwang94/… | 341 |15 | 4.4%
+Elaine Y @egsy  Aug 8 second idea💡name a number of thread retweets we need in order to receive the discount. | 256| 6| 2.3% 
+Elaine Y @egsy  Aug 8 by that metric, if all students @holbertonschool reach 100k commits by end of month, then @slackhq approves us for the ed discount? 🙏🤓 |259| 5 | 1.9%
+Elaine Y @egsy  Aug 8 if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since. | 701|16|2.3%
+Elaine Y @egsy  Aug 8 idea💡set a goal number @github commits that all @holbertonschool students here reach. | 842|12|1.4% 
+Elaine Y @egsy  Aug 8 …since @holbertonschool is a non-traditional school and @slackhq is a non-traditional messaging platform, we should able to negotiate. | 782|13|1.7%
+Elaine Y @egsy  Aug 8 the 10k msg limit kills my classmate's investment in @SlackHQ... how I wish they'd recognize @holbertonschool for the ed discount💸💰 … | 1,045|57|5.5%View Tweet activity
