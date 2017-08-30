@@ -10,12 +10,11 @@ At 12:50 PM PDT on August 8, 2017, Twitter user Elaine Yeung ([@egsy](https://tw
 
 #### Definitions
 
-According to [Twitter's documentation](https://business.twitter.com/en/help/campaign-measurement-and-analytics/tweet-activity-dashboard.html), every tweet generates a number of analytic points. The three points of analysis referenced in the below report are:
+According to [Twitter's documentation](https://business.twitter.com/en/help/campaign-measurement-and-analytics/tweet-activity-dashboard.html), every tweet generates a number of analytic points. The three points of analysis referenced in the table below are:
 
-- Impressions: Times people were served a Tweet in timeline or search results
-- Engagements: Total number of times someone interacted with a Tweet. Clicks anywhere on the Tweet, including Retweets, replies, follows, likes, links, cards, hashtags, embedded media, username, profile photo, or Tweet expansion
-- Engagement rate: The number of engagements divided by the number of impressions
-
+> - Impressions: Times people were served a Tweet in timeline or search results
+> - Engagements: Total number of times someone interacted with a Tweet. Clicks anywhere on the Tweet, including Retweets, replies, follows, likes, links, cards, hashtags, embedded media, username, profile photo, or Tweet expansion
+> - Engagement rate: The number of engagements divided by the number of impressions
 
 Tweets (all times listed in PDT) | Impressions | Engagements | Engagement rate
 :--- | :--- | :--- | :---
