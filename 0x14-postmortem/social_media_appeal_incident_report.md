@@ -25,28 +25,22 @@ pidea💡set a goal number <a href="https://twitter.com/github">@github</a> comm
 if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009675569094657">August 8, 2017</a> 12:51 PM | 701|16|2.3%
 by that metric, if all students <a href="https://twitter.com/holbertonschool">@holbertonschool</a> reach 100k commits by end of month, then <a href="https://twitter.com/SlackHQ">@slackhq</a> approves us for the ed discount? 🙏🤓</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010116377862144">August 8, 2017</a> 12:53 PM  |259| 5 | 1.9%
 second idea💡name a number of thread retweets we need in order to receive the discount.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010316219670528">August 8, 2017</a> 12:54 PM  | 256| 6| 2.3% 
-I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a> 2:19 PM <br> <b>Slack responded to this tweet with the following:</b><br>We can confirm that there&#39;s no copy pasta with our tweets. We&#39;re sorry for the disappointment around our current program policies and...</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041647070900224">August 8, 2017</a> 2:58 PM<br><br>We really do appreciate the feedback, and we&#39;ve shared it with our team.</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041731342815233">August 8, 2017</a> 2:59 PM <br><br>😢 We&#39;re sorry we didn&#39;t have good news to share. We do review our programs regularly and we&#39;d truly like to expand it in the future. ❤️</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041840747077633">August 8, 2017</a> 2:59 PM | 341 |15 | 4.4%
+I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a> 2:19 PM <br><br><br> <b>Slack responded to this tweet with the following:</b><br>We can confirm that there&#39;s no copy pasta with our tweets. We&#39;re sorry for the disappointment around our current program policies and...</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041647070900224">August 8, 2017</a> 2:58 PM<br><br>We really do appreciate the feedback, and we&#39;ve shared it with our team.</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041731342815233">August 8, 2017</a> 2:59 PM <br><br>😢 We&#39;re sorry we didn&#39;t have good news to share. We do review our programs regularly and we&#39;d truly like to expand it in the future. ❤️</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041840747077633">August 8, 2017</a> 2:59 PM | 341 |15 | 4.4%
 
+### Issue detection and actions taken
 
-
-### Issue detection
-
-- Prior to Holberton School, Elaine oversaw her school's adoption of Slack over the course of the year; she is a self-proclaimed fan of the service.
-- Once at Holberton School, she quickly recognized multiple ways in which students at the school could optimize their usage of the service.
-
-### actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
-
-- March 1 2017 
-
-### misleading investigation/debugging paths that were taken
-### which team/individuals was the incident escalated to
+- **2015-2016** - Elaine oversaw her the adoption of Slack at her previous organization and is a self-proclaimed super-fan of the service.
+- **November 2016 - ongoing** - Elaine enrolled at Holberton School. After several months of observing Slack usage at school, she identified ways in which students at the school could optimize their usage of the service
+  - **March 1, 2017** - for her first stand-up talk, Elaine chose to highlight ways in which classmates could better use Slack. During stand-up she learned that Slack did not recognize Holberton School as an educational institution.
+  
+### Level of incident escalation
 
 - August 8, 2017 - Elaine messaged #all_hippokampoiers channel on slack asking them to retweet and like her original tweet
 
-### how the incident was resolved
+### Incident resolution
 
-- Slack's response to Elaine rendered the incident "dead on arrival"
-
+- Slack's response to Elaine resolved the incident.
+- 
 
 ##  Root cause and resolution
 
@@ -60,7 +54,8 @@ The root issue is still unresolved and Holberton School's slack team is still li
 
 ##   Corrective and preventative measures
 
-- what are the things that can be improved/fixed
+Moving forward, 
+- improved/fixed
 - a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
 
 # EXTRA NOTES
