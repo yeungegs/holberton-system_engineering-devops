@@ -10,7 +10,7 @@ At 12:50 PM PDT on August 8, 2017, Twitter user Elaine Yeung ([@egsy](https://tw
 
 #### Definitions
 
-According to [Twitter's documentation](https://business.twitter.com/en/help/campaign-measurement-and-analytics/tweet-activity-dashboard.html), every tweet generates a number of analytic points. The three points of analysis referenced in this report are:
+According to [Twitter's documentation](https://business.twitter.com/en/help/campaign-measurement-and-analytics/tweet-activity-dashboard.html), every tweet generates a number of analytic points. The three points of analysis referenced in the below report are:
 
 - Impressions: Times people were served a Tweet in timeline or search results
 - Engagements: Total number of times someone interacted with a Tweet. Clicks anywhere on the Tweet, including Retweets, replies, follows, likes, links, cards, hashtags, embedded media, username, profile photo, or Tweet expansion
@@ -25,7 +25,8 @@ pidea💡set a goal number <a href="https://twitter.com/github">@github</a> comm
 if met, then we qualify for the slack for education discount. 6 months ago I was a novice coder and have made 1,982 commits since.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009675569094657">August 8, 2017</a> 12:51 PM | 701|16|2.3%
 by that metric, if all students <a href="https://twitter.com/holbertonschool">@holbertonschool</a> reach 100k commits by end of month, then <a href="https://twitter.com/SlackHQ">@slackhq</a> approves us for the ed discount? 🙏🤓</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010116377862144">August 8, 2017</a> 12:53 PM  |259| 5 | 1.9%
 second idea💡name a number of thread retweets we need in order to receive the discount.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010316219670528">August 8, 2017</a> 12:54 PM  | 256| 6| 2.3% 
-I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a> 2:19 PM | 341 |15 | 4.4%
+I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a> 2:19 PM <br> <b>Slack responded to this tweet with the following:</b><br>We can confirm that there&#39;s no copy pasta with our tweets. We&#39;re sorry for the disappointment around our current program policies and...</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041647070900224">August 8, 2017</a> 2:58 PM<br><br>We really do appreciate the feedback, and we&#39;ve shared it with our team.</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041731342815233">August 8, 2017</a> 2:59 PM <br><br>😢 We&#39;re sorry we didn&#39;t have good news to share. We do review our programs regularly and we&#39;d truly like to expand it in the future. ❤️</p>&mdash; Slack (@SlackHQ) <a href="https://twitter.com/SlackHQ/status/895041840747077633">August 8, 2017</a> 2:59 PM | 341 |15 | 4.4%
+
 
 
 ### Issue detection
