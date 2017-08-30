@@ -1,4 +1,4 @@
-_**Full disclosure: the author of this report [@yeungegs](https://github.com/yeungegs) is [@egsy](https://twitter.com/egsy).**_
+_**Full disclosure: the author of this report ([@yeungegs](https://github.com/yeungegs)) is the Twitter user discussed ([@egsy](https://twitter.com/egsy)).**_
 
 # Social Media Campaign Incident Report
 
@@ -7,26 +7,14 @@ At 12:50 PM PDT on August 8, 2017, Twitter user Elaine Yeung ([@egsy](https://tw
 
 
 ## Timeline
-### Definitions
+
+#### Definitions
 
 According to [Twitter's documentation](https://business.twitter.com/en/help/campaign-measurement-and-analytics/tweet-activity-dashboard.html), every tweet generates a number of analytic points. The three points of analysis referenced in this report are:
 
 - Impressions: Times people were served a Tweet in timeline or search results
 - Engagements: Total number of times someone interacted with a Tweet. Clicks anywhere on the Tweet, including Retweets, replies, follows, likes, links, cards, hashtags, embedded media, username, profile photo, or Tweet expansion
 - Engagement rate: The number of engagements divided by the number of impressions
-
-### Issue detection
-
-With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
-
-Before joining Holberton School, Elaine led her school's adoption of Slack and is a self-proclaimed fan of the service. 
-
-### how was the issue detected (monitoring alert, an engineer noticed something, a customer complained...)
-### actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
-### misleading investigation/debugging paths that were taken
-### which team/individuals was the incident escalated to
-### how the incident was resolved
-The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
 
 
 Tweets (all times listed in PDT) | Impressions | Engagements | Engagement rate
@@ -39,13 +27,41 @@ by that metric, if all students <a href="https://twitter.com/holbertonschool">@h
 second idea💡name a number of thread retweets we need in order to receive the discount.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895010316219670528">August 8, 2017</a> 12:54 PM  | 256| 6| 2.3% 
 I was really expecting a more empathetic response from <a href="https://twitter.com/SlackHQ">@SlackHQ</a> 😔😔😔 <a href="https://t.co/AtBdHP1RGf">https://t.co/AtBdHP1RGf</a></p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895031815924203520">August 8, 2017</a> 2:19 PM | 341 |15 | 4.4%
 
+
+### Issue detection
+
+- Prior to Holberton School, Elaine oversaw her school's adoption of Slack over the course of the year; she is a self-proclaimed fan of the service.
+- Once at Holberton School, she quickly recognized multiple ways in which students at the school could optimize their usage of the service.
+
+### actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
+
+- March 1 2017 
+
+### misleading investigation/debugging paths that were taken
+### which team/individuals was the incident escalated to
+
+- August 8, 2017 - Elaine messaged #all_hippokampoiers channel on slack asking them to retweet and like her original tweet
+
+### how the incident was resolved
+
+- Slack's response to Elaine rendered the incident "dead on arrival"
+
+
 ##  Root cause and resolution
 
-- explain in detail what was causing the issue
-- explain in detail how the issue was fixed
+### explain in detail what was causing the issue
+
+With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
+
+### explain in detail how the issue was fixed
+
+The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
 
 ##   Corrective and preventative measures
 
 - what are the things that can be improved/fixed
 - a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
 
+# EXTRA NOTES
+The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
+	
