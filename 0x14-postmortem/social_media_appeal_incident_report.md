@@ -32,7 +32,7 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 - **2015-2016** - Elaine oversaw her the adoption of Slack at her previous organization and is a self-proclaimed super-fan of the service.
 - **November 2016 - ongoing** - Elaine enrolled at Holberton School. After several months of observing Slack usage at school, she identified ways in which students at the school could optimize their usage of the service
   - **March 1, 2017** - for her first stand-up talk, Elaine chose to highlight ways in which classmates could better use Slack. During stand-up she learned that Slack did not recognize Holberton School as an educational institution.
-  
+
 ### Level of incident escalation
 
 - August 8, 2017 - Elaine messaged #all_hippokampoiers channel on slack asking them to retweet and like her original tweet
@@ -40,19 +40,16 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 ### Incident resolution
 
 - Slack's response to Elaine resolved the incident.
-- 
 
-##  Root cause and resolution
-
-### explain in detail what was causing the issue
+##  Root cause
 
 With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
 
-### explain in detail how the issue was fixed
+## Resolution and recovery
 
 The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
 
-##   Corrective and preventative measures
+## Corrective and Preventative measures
 
 Moving forward, 
 - improved/fixed
