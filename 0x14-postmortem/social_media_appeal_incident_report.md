@@ -30,7 +30,7 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 
 - **2015-2016** - Elaine oversaw her the adoption of Slack at her previous organization and is a self-proclaimed super-fan of the service.
 - **November 2016 - ongoing** - Elaine enrolled at Holberton School. After several months of observing Slack usage at school, she identified ways in which students at the school could optimize their usage of the service
-  - **March 1, 2017** - for her first stand-up talk, Elaine chose to highlight ways in which classmates could better use Slack. During stand-up she learned that Slack did not recognize Holberton School as an educational institution.
+  - **March 1, 2017** - for her first stand-up talk, Elaine chose to [highlight ways in which classmates could better use Slack](https://docs.google.com/presentation/d/1FdCK0YN-zLkhrYFFGnHBcKTXhygZM6oSsl-upRb3KFE/edit?usp=sharing). During stand-up she learned that Slack did not recognize Holberton School as an educational institution.
 
 ### Level of incident escalation
 
@@ -62,20 +62,26 @@ Identifying the root cause of this incident proved challenging. Ultimately, two 
 	 - ... communicate her intent to any Holberton School supporters prior to campaign launch
 	   - More time was lost in the minutes 
 	 - ... gather enough retweets and likes in a limited span of time
-	   - Elaine was largely inspired by [Carter Wilkerson's](http://www.nydailynews.com/news/national/teen-free-nuggets-wendys-breaks-twitter-record-article-1.3150258) appeal to Wendy's for a year's worth of chicken nuggets.
+	   - Elaine was largely inspired by [Carter Wilkerson's](http://www.nydailynews.com/news/national/teen-free-nuggets-wendys-breaks-twitter-record-article-1.3150258) appeal to Wendy's for a year's worth of chicken nuggets. Whereas Carter's original tweet was almost immediately retweeted and supported by his high school classmates, Elaine's tweet was retweeted by less than 5% of the students in #all_hippokampoiers.
 	   
 ## Resolution and recovery
 
-Unfortunately both root causes are still unresolved.
+Both root causes are unresolved. As a reflective measure, Elaine chose to focus her post mortem assignment on this failed Twitter campaign.
 
 ## Corrective and Preventative measures
 
-1. Continue educating Holberton School Slack team users how to best use Slack
+The following actions may be taken to prevent this failure from repeating: 
 
+1. Slack free account limitations
+   - Continue educating Holberton School Slack team users how to best use the platform in spite of its limitations
+	 - Consider integrating content from Elaine's presentation into new student welcome documentation so they arrive to school knowing:
+	   - **how** to save messages by starring them
+	   - **why** reaction emojis should be preferred over one word messages such as 'ok' 'thx'
+	   - **basic slash command** functionality such as `/remind` and `/collapse`
+   - Work with current students (such as Steven) to create a utility that backs up Slack data to a local source
 
-
-- 
-
-2.  a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
-
-	
+2. Reaching viral status with a Twitter campaign
+   - The relationship between audience appeal and prior planning to a campaign is inverse:
+	 - The **less** a campaign appeals to the general public, the **more** planning needs to happen prior to campaign launch.
+   - Study other successful viral Twitter campaigns to identify and extract trends that can be universally applied to other campaigns.
+	 	 
