@@ -45,10 +45,17 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 ##  Root cause
 
 Identifying the root cause of this incident proved challenging since there were essentially two root causes:
-1. hey[<64;98;20M
+1. hey
+  - here
+  - is 
+  - unordered
+  - bullets
 2. there
+  - here
+  - is 
+  - unordered
+  - bullets
 
-- 
 With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
 
 ## Resolution and recovery
