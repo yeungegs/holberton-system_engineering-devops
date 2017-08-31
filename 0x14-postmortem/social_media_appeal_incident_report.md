@@ -44,30 +44,38 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 
 ##  Root cause
 
-Identifying the root cause of this incident proved challenging since there were essentially two root causes:
-1. hey
-   - here
-   - is 
-   - unordered
-   - bullets
-2. there
-	- here
-	- is 
-	- unordered
-	- bulletsq
+Identifying the root cause of this incident proved challenging. Ultimately, two root causes were identified: first, the reason that the Twitter campaign was launched and second, for the reason that the Twitter campaign failed.
+1. Holberton School is currently using a free account and does not qualify for the educational discount.
+   - Free accounts on Slack have restrictive limitations:
+	 - Restriction 1: Messages older than 10,000 messages are archived.
+	   - With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing.
+	   - With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives.
+	   - At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable.
+	 - Restriction 2: Teams are limited to only three apps or integrations.
+	   - Holberton School's team cannot fully benefit from the wide range of apps and integrations available on Slack.
 
-With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
-
+2. Elaine missed key opportunites to strategically position supporters of Holberton School prior to the Twitter campaign
+   - The intent of this Twitter campaign was to apply social pressure on Slack; ideally, the outcome would be for Slack to make an exception and provide Holberton School with an Slack for Education discount. 
+   - Elaine, the initiator and organizer of this campaign, failed to:
+	 - ... predict the amount of time that it would take for Slack to resond
+	   - Since Slack responded in less than three hours after the initial tweet, the campaign quickly lost momentum
+	 - ... communicate her intent to any Holberton School supporters prior to campaign launch
+	   - More time was lost in the minutes 
+	 - ... gather enough retweets and likes in a limited span of time
+	   - Elaine was largely inspired by [Carter Wilkerson's](http://www.nydailynews.com/news/national/teen-free-nuggets-wendys-breaks-twitter-record-article-1.3150258) appeal to Wendy's for a year's worth of chicken nuggets.
+	   
 ## Resolution and recovery
 
-The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
+Unfortunately both root causes are still unresolved.
 
 ## Corrective and Preventative measures
 
-Moving forward, 
-- improved/fixed
-- a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
+1. Continue educating Holberton School Slack team users how to best use Slack
 
-# EXTRA NOTES
-The root issue is still unresolved and Holberton School's slack team is still limited to 10,000 message limit.
+
+
+- 
+
+2.  a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
+
 	
