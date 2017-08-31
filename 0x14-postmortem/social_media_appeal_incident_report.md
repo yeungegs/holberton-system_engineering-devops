@@ -2,6 +2,8 @@ _**Full disclosure: the author of this report ([@yeungegs](https://github.com/ye
 
 # Social Media Campaign Incident Report
 
+![image](https://user-images.githubusercontent.com/23224088/29910100-697f6076-8ddd-11e7-9279-dde9401b92cd.png)
+
 ## Issue Summary
 At 12:50 PM PDT on August 8, 2017, Twitter user Elaine Yeung ([@egsy](https://twitter.com/egsy)) launched a tweet campaign targeting [Slack](https://slack.com/). The goal of the campaign was to apply social pressure on Slack so that they would make an exception to their [Slack for Education](https://get.slack.help/hc/en-us/articles/206646877-Slack-for-Education) screening process and recognize [Holberton School](https://www.holbertonschool.com/) as an educational organization. The parent tweet was retweeted 6 times and received 14 likes. Within three hours, Slack responded and held firm to their existing policy. The goal of receiving an education discount was not achieved, rendering the tweet campaign a failure.
 
