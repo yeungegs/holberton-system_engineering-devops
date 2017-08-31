@@ -46,15 +46,15 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 
 Identifying the root cause of this incident proved challenging since there were essentially two root causes:
 1. hey
-   - this level one is tabbed once
-	- this is moved used `C-c >`
-	- unordered
-	- bullets
+   - here
+   - is 
+   - unordered
+   - bullets
 2. there
-  - here
-  - is 
-  - unordered
-  - bulletsq
+	- here
+	- is 
+	- unordered
+	- bulletsq
 
 With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
 
