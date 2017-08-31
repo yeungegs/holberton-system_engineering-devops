@@ -2,7 +2,7 @@ _**Full disclosure: the author of this report ([@yeungegs](https://github.com/ye
 
 # Social Media Campaign Incident Report
 
-##   Issue Summary
+## Issue Summary
 At 12:50 PM PDT on August 8, 2017, Twitter user Elaine Yeung ([@egsy](https://twitter.com/egsy)) launched a tweet campaign targeting [Slack](https://slack.com/). The goal of the campaign was to apply social pressure on Slack so that they would make an exception to their [Slack for Education](https://get.slack.help/hc/en-us/articles/206646877-Slack-for-Education) screening process and recognize [Holberton School](https://www.holbertonschool.com/) as an educational organization. The parent tweet was retweeted 6 times and received 14 likes. Within three hours, Slack responded and held firm to their existing policy. The goal of receiving an education discount was not achieved, rendering the tweet campaign a failure.
 
 
@@ -16,7 +16,7 @@ According to [Twitter's documentation](https://business.twitter.com/en/help/camp
 > - Engagements: Total number of times someone interacted with a Tweet. Clicks anywhere on the Tweet, including Retweets, replies, follows, likes, links, cards, hashtags, embedded media, username, profile photo, or Tweet expansion
 > - Engagement rate: The number of engagements divided by the number of impressions
 
-Tweets (all times listed in PDT) | Impressions | Engagements | Engagement rate
+Tweets (all times listed in PDT) | ImpressionOCs | Engagements | Engagement rate
 :--- | :--- | :--- | :---
 the 10k msg limit kills my classmate&#39;s investment in <a href="https://twitter.com/SlackHQ">@SlackHQ</a>... how I wish they&#39;d recognize <a href="https://twitter.com/holbertonschool">@holbertonschool</a> for the ed discount💸💰 …</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009313638436864">August 8, 2017</a> 12:50 PM | 1,045|57|5.4%
 …since <a href="https://twitter.com/holbertonschool">@holbertonschool</a> is a non-traditional school and <a href="https://twitter.com/SlackHQ">@slackhq</a> is a non-traditional messaging platform, we should able to negotiate.</p>&mdash; Elaine Y (@egsy) <a href="https://twitter.com/egsy/status/895009426460917761">August 8, 2017</a> 12:50 PM | 782|13|1.7%
@@ -34,7 +34,9 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 
 ### Level of incident escalation
 
-- August 8, 2017 - Elaine messaged #all_hippokampoiers channel on slack asking them to retweet and like her original tweet
+- August 8, 2017 - Elaine messaged #all_hippokampoiers channel on slack asking them to retweet and/or like her original tweet. 
+  - August 25, 2017 - The #all_hippokampoiers channel has 130 users.
+  - Six users retweeted the link while 14 users liked it. 
 
 ### Incident resolution
 
@@ -42,6 +44,11 @@ I was really expecting a more empathetic response from <a href="https://twitter.
 
 ##  Root cause
 
+Identifying the root cause of this incident proved challenging since there were essentially two root causes:
+1. hey[<64;98;20M
+2. there
+
+- 
 With each new batch of students enrolled, the number of users on the Holberton School Slack team is ever increasing. Holberton School is currently using a free account. Free accounts are limited to a 10,000 message limit. With more members sending more messages, messages are quickly lost. One of Slack's hallmark functions is its ability to search message archives. At the school's current rate of slack usage, 10,000 messages are sent within a three week period, rendering all messages older than that unsearchable. 
 
 ## Resolution and recovery
