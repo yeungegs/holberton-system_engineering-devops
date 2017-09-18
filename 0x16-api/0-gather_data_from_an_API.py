@@ -6,8 +6,9 @@ import sys
 
 if __name__ == "__main__":
     employeeid = sys.argv[1]
-    EMPLOYEE_NAME = requests.get("https://jsonplaceholder.typicode.com/users/{:d}"
-                        .format(int(employeeid))).json().get("name")
+    EMPLOYEE_NAME = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{:d}"
+        .format(int(employeeid))).json().get("name")
     DONE_TASKS = []
     TOTAL_NUMBER_OF_TASKS = 0
     r = requests.get("https://jsonplaceholder.typicode.com/todos").json()
