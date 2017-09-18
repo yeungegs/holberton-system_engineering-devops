@@ -6,8 +6,8 @@ import sys
 
 if __name__ == "__main__":
     employeeid = sys.argv[1]
-    name = requests.get("https://jsonplaceholder.typicode.com/users/{:d}"
-                        .format(employeeid)).json().get("name")
+    EMPLOYEE_NAME = requests.get("https://jsonplaceholder.typicode.com/users/{:d}"
+                        .format(int(employeeid))).json().get("name")
     tasksall = 0
     taskscompleted = []
     r = requests.get("https://jsonplaceholder.typicode.com/todos").json()
@@ -17,5 +17,7 @@ if __name__ == "__main__":
             tasksall += 1
             if (task.get("completed")):
                 taskscompleted.append(task.get("title"))
-
-            
+    print("Employee {:s} is done with tasks({:d}/{:d}):".format
+          (EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
+    for task in taskscompleted:
+        print("\t {:s}".format(task))
