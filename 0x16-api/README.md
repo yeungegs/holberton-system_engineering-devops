@@ -29,14 +29,6 @@ This project introduces concepts of building Python scripts in order to access a
 *   [What are microservices](https://smartbear.com/learn/api-design/what-are-microservices/)
 *   [PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry](https://www.python.org/dev/peps/pep-0008/)
 
-<ul>
-<li><a href="https://www.turnkeylinux.org/blog/friends-dont-let-friends-program-shell-script">Friends don&#39;t let friends program in shell script</a></li>
-<li><a href="http://www.webopedia.com/TERM/A/API.html">What is an API</a></li>
-<li><a href="https://www.sitepoint.com/developers-rest-api/">What is a REST API</a></li>
-<li><a href="https://smartbear.com/learn/api-design/what-are-microservices/">What are microservices</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0008/">PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry</a></li>
-</ul>
-
 ### Project Requirements
 *   Allowed editors: `vi`, `vim`, `emacs`
 *   All your files will be interpreted/compiled on Ubuntu 14.04 LTS using `python3` (version 3.4.3)
