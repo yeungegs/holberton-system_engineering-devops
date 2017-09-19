@@ -15,16 +15,14 @@ if __name__ == "__main__":
 
     for user in ALL_USERS:
         EMPLOYEE_ID = user.get("id")
-        print("id: {}".format(EMPLOYEE_ID))
         USERNAME = user.get("username")
-        print("username: {}".format(USERNAME))
 
         for task in ALL_TASKS:
             if (task.get("userId") == int(EMPLOYEE_ID)):
                 dict = {}
                 dict["task"] = task.get("title")
                 dict["completed"] = task.get("completed")
-                dict["USERNAMEOC"] = USERNAME
+                dict["username"] = USERNAME
                 ALL_TASKS.append(dict)
 
         ALL_RECORDS[EMPLOYEE_ID] = ALL_TASKS
