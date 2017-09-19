@@ -16,9 +16,9 @@ if __name__ == "__main__":
     for task in r:
         if (task.get("userId") == int(EMPLOYEE_ID)):
             list = []
-            list.extend(EMPLOYEE_ID,
+            list.extend((EMPLOYEE_ID,
                         USERNAME,
                         task.get("completed"),
-                        task.get("title"))
+                        task.get("title")))
             ALL_TASKS.append(list)
     print (ALL_TASKS)
