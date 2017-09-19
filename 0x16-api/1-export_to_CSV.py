@@ -23,8 +23,6 @@ if __name__ == "__main__":
             ALL_TASKS.append(list)
 
     with open("{}.csv".format(EMPLOYEE_ID), 'w') as csvfile:
-        fieldnames = ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
         writer = csv.writer(csvfile,
-                            quotechar='"',
                             quoting=csv.QUOTE_ALL)
         writer.writerows(ALL_TASKS)
