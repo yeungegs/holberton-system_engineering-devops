@@ -12,16 +12,15 @@ if __name__ == "__main__":
     USERNAME = requests.get(
         "https://jsonplaceholder.typicode.com/users/{:d}"
         .format(int(EMPLOYEE_ID))).json().get("username")
-
     ALL_TASKS = []
-    r = requests.get("https://jsonplaceholder.typicode.com/todos").json()
+    TODOS = requests.get("https://jsonplaceholder.typicode.com/todos").json()
 
-    for task in r:
+    for task in TODOS:
         if (task.get("userId") == int(EMPLOYEE_ID)):
-            list = {}
-            list["task"] = task.get("title")
-            list["completed"] = task.get("completed")
-            list["username"] = USERNAME
+            dict = {}
+            dict["task"] = task.get("title")
+            dict["completed"] = task.get("completed")
+            dict["username"] = USERNAME
             ALL_TASKS.append(list)
 
     with open("{}.json".format(EMPLOYEE_ID), 'w') as jsonfile:
