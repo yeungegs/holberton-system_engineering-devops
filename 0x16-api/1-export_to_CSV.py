@@ -21,4 +21,8 @@ if __name__ == "__main__":
                         task.get("completed"),
                         task.get("title")))
             ALL_TASKS.append(list)
-    print (ALL_TASKS)
+
+    with open("{}.csv".format(EMPLOYEE_ID), 'w') as csvfile:
+        fieldnames = ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
+        writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+        writer.writerows(ALL_TASKS)
