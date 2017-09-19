@@ -24,5 +24,7 @@ if __name__ == "__main__":
 
     with open("{}.csv".format(EMPLOYEE_ID), 'w') as csvfile:
         fieldnames = ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
-        writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+        writer = csv.writer(csvfile,
+                            quotechar='"',
+                            quoting=csv.QUOTE_ALL)
         writer.writerows(ALL_TASKS)
