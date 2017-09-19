@@ -12,7 +12,7 @@ if __name__ == "__main__":
     USERNAME = requests.get(
         "https://jsonplaceholder.typicode.com/users/{:d}"
         .format(int(EMPLOYEE_ID))).json().get("username")
-    
+
     ALL_TASKS = []
     r = requests.get("https://jsonplaceholder.typicode.com/todos").json()
 
