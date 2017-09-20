@@ -6,9 +6,9 @@ Requirements:
 
 ##   Issue Summary (that is often what executives will read) must contain:
 
-	*   duration of the outage with start and end times (including timezone)
-	*   what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
-	*   what was the root cause
+*   duration of the outage with start and end times (including timezone)
+*   what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
+*   what was the root cause
 
 ##   Timeline (format bullet point, format: `time` - `keep it short, 1 or 2 sentences`) must contain:
 
@@ -21,13 +21,13 @@ Requirements:
 
 ##  Root cause and resolution must contain:
 
-	*   explain in detail what was causing the issue
-	*   explain in detail how the issue was fixed
+*   explain in detail what was causing the issue
+*   explain in detail how the issue was fixed
 
 ##   Corrective and preventative measures must contain:
 
-	*   what are the things that can be improved/fixed
-	*   a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
+*   what are the things that can be improved/fixed
+*   a list of tasks to address the issue (example: patch Nginx server, add monitoring on server memory...)
 
 ##   Be brief and straight to the point, between 400 to 600 words
 													
