@@ -12,12 +12,12 @@ Requirements:
 
 ##   Timeline (format bullet point, format: `time` - `keep it short, 1 or 2 sentences`) must contain:
 
-	*   when was the issue detected
-	*   how was the issue detected (monitoring alert, an engineer noticed something, a customer complained...)
-	*   actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
-	*   misleading investigation/debugging paths that were taken
-	*   which team/individuals was the incident escalated to
-	*   how the incident was resolved
+*   when was the issue detected
+*   how was the issue detected (monitoring alert, an engineer noticed something, a customer complained...)
+*   actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
+*   misleading investigation/debugging paths that were taken
+*   which team/individuals was the incident escalated to
+*   how the incident was resolved
 
 ##  Root cause and resolution must contain:
 
