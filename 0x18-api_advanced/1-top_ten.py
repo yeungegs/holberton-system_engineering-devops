@@ -9,13 +9,17 @@ def top_ten(subreddit):
     If not a valid subreddit, print None.
     Ensure that you are not following redirects.
     """
-    url = "http://www.reddit.com/r/{:s}/about.json".format(subreddit)
+    url = "http://www.reddit.com/r/{:s}/hot.json?limit={:d}".format(subreddit, 10)
     headers = {'user-agent': 'egsyquest'}
     r = requests.get(url, headers=headers)
 
     if (r.status_code is 302):
-        return 0
+        print("None")
+        return
     if (r.status_code is 404):
-        return 0
-
-    r.json()
+        print("None")
+        return
+    else:
+        r.json()
+        for post in r['data']['children']:
+            print(post['data']['title'])
