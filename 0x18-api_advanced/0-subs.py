@@ -20,4 +20,4 @@ def number_of_subscribers(subreddit):
     if (r.status_code is 404):
         return 0
 
-    r.json()
+    return r.json()['data'].get('subscribers', 0)
