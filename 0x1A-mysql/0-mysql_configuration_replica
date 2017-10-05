@@ -44,7 +44,7 @@ skip-external-locking
 #
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-bind-address		= 127.0.0.1
+# bind-address		= 127.0.0.1
 #
 # * Fine Tuning
 #
@@ -89,7 +89,7 @@ relay-log               = /var/log/mysql/mysql-relay-bin.log
 log_bin			= /var/log/mysql/mysql-bin.log
 expire_logs_days	= 10
 max_binlog_size         = 100M
-#binlog_do_db		= include_database_name
+binlog_do_db		= holberton
 #binlog_ignore_db	= include_database_name
 #
 # * InnoDB
